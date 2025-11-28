@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transacciones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Casino en línea</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="desarrolladores.html">Desarrolladores</a>
+    <a href="historia.html">Reglas</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="transacciones.html">Transacciones</a>
+    <a href="ruleta.html">Ruleta</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h2>Saldo actual: <span id="saldoActual">$0</span></h2>
+
+  <section class="grid-2">
+    <!-- DEPÓSITO -->
+    <article class="card">
+      <h1>Depositar</h1>
+      <form id="formDeposito" class="form">
+        <div class="form-row"><label>Nombre <input name="nombre" type="text"></label></div>
+        <div class="form-row"><label>Tarjeta <input name="tarjeta" type="text" maxlength="16"></label></div>
+        <div class="form-row"><label>Fecha <input name="fecha" type="text" placeholder="MM/AA"></label></div>
+        <div class="form-row"><label>CVV <input name="cvv" type="text" maxlength="3"></label></div>
+        <div class="form-row"><label>Monto <input name="monto" type="number"></label></div>
+        <button class="btn" type="submit">Depositar</button>
+      </form>
+    </article>
+
+    <!-- RETIRO -->
+    <article class="card">
+      <h1>Retirar</h1>
+      <form id="formRetiro" class="form">
+        <div class="form-row"><label>Nombre <input name="nombre" type="text"></label></div>
+        <div class="form-row"><label>Cuenta <input name="cuenta" type="text"></label></div>
+        <div class="form-row"><label>Banco <input name="banco" type="text"></label></div>
+        <div class="form-row"><label>Monto <input name="monto" type="number"></label></div>
+        <button class="btn btn-secondary" type="submit">Retirar</button>
+      </form>
+    </article>
+  </section>
+
+  <section>
+    <h2>Historial de transacciones</h2>
+    <ul id="historialTransacciones"></ul>
+  </section>
+</main>
+
+<footer><small>Desarrollo web y móvil</small></footer>
+
+<script src="transacciones.js"></script>
+</body>
+</html>
