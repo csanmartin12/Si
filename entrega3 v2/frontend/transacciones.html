@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transacciones</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Casino en línea</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="desarrolladores.html">Desarrolladores</a>
+    <a href="historia.html">Reglas</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="transacciones.html">Transacciones</a>
+    <a href="ruleta.html">Ruleta</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h2>Saldo actual: $<span id="saldo-actual">0</span></h2>
+  </section>
+
+  <section class="grid-2">
+
+    <article class="card">
+      <h2>Depositar</h2>
+      <form id="formulario-deposito">
+        <input id="monto-deposito" type="number" placeholder="Monto" required>
+        <button type="submit">Depositar</button>
+      </form>
+    </article>
+
+    <article class="card">
+      <h2>Retirar</h2>
+      <form id="formulario-retiro">
+        <input id="monto-retiro" type="number" placeholder="Monto" required>
+        <button type="submit">Retirar</button>
+      </form>
+    </article>
+
+  </section>
+
+</main>
+
+<footer><small>Desarrollo web y móvil</small></footer>
+
+<script src="js/commons.js"></script>
+<script>protegerRuta();</script>
+<script src="js/transacciones.js"></script>
+
+</body>
+</html>

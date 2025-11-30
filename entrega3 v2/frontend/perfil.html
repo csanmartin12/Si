@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfil</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Casino en línea</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="desarrolladores.html">Desarrolladores</a>
+    <a href="historia.html">Reglas</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="transacciones.html">Transacciones</a>
+    <a href="ruleta.html">Ruleta</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h3>Datos del usuario</h3>
+    <p><strong>Usuario:</strong> <span id="dato-nombre-usuario"></span></p>
+    <p><strong>Nombre completo:</strong> <span id="dato-nombre-completo"></span></p>
+    <p><strong>Correo:</strong> <span id="dato-email"></span></p>
+    <p><strong>Fecha de nacimiento:</strong> <span id="dato-fecha-nacimiento"></span></p>
+  </section>
+
+  <section class="card">
+    <h3>Saldo actual</h3>
+    <p><strong id="dato-saldo"></strong></p>
+  </section>
+
+</main>
+
+<footer><small>Desarrollo web y móvil</small></footer>
+
+<script src="js/commons.js"></script>
+<script>protegerRuta();</script>
+<script src="js/perfil.js"></script>
+
+</body>
+</html>
