@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruleta</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ruleta.css">
+</head>
+<body>
+  <header>
+    <h1>Casino en línea</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="registro.html">Registro</a>
+      <a href="login.html">Login</a>
+      <a href="desarrolladores.html">Desarrolladores</a>
+      <a href="historia.html">Reglas</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="transacciones.html">Transacciones</a>
+      <a href="ruleta.html">Ruleta</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="grid-2">
+      <article class="card">
+        <h2>Mesa de Ruleta</h2>
+        <div class="saldo-card">
+          Saldo disponible: $<span id="saldoActual">1000</span>
+        </div>
+        <div class="ruleta" id="ruleta">
+          <div class="numero-ganador" id="numeroGanador">-</div>
+        </div>
+        <button id="btnGirar" onclick="girarRuleta()">GIRAR RULETA</button>
+        <a href='perfil.html'><button type='button'>Volver a tu perfil</button></a>
+      </article>
+
+      <article class="card">
+        <h2>Tablero de Apuestas</h2>
+        <div class="tablero">
+          <h3>Apuestas</h3>
+          <table class="table-apuestas">
+            <tr>
+              <td class="casilla-rojo" onclick="hacerApuesta('rojo')">ROJO</td>
+              <td class="casilla-negro" onclick="hacerApuesta('negro')">NEGRO</td>
+            </tr>
+            <tr>
+              <td class="casilla-rojo" onclick="hacerApuesta('par')">PAR</td>
+              <td class="casilla-negro" onclick="hacerApuesta('impar')">IMPAR</td>
+            </tr>
+            <tr>
+              <td class="casilla-rojo" onclick="hacerApuesta('bajo')">1-18</td>
+              <td class="casilla-negro" onclick="hacerApuesta('alto')">19-36</td>
+            </tr>
+          </table>
+
+          <h3>Números Específicos</h3>
+          <div class="numeros-grid" id="numerosGrid"></div>
+        </div>
+
+        <h3>Últimos resultados</h3>
+        <ul class="pill-list">
+          <li id="historialPills"></li>
+        </ul>
+
+        <h3>Últimas apuestas</h3>
+        <table class="table">
+          <tr>
+            <th>Tipo</th>
+            <th>Monto</th>
+            <th>Resultado</th>
+          </tr>
+          <tbody id="tablaApuestas">
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </main>
+
+  <div id="modalApuesta" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h2>Realizar Apuesta</h2>
+      <p>Tipo de apuesta: <strong id="tipoApuesta"></strong></p>
+      <p>Saldo disponible: $<span id="saldoModal"></span></p>
+      <label>Monto a apostar:</label>
+      <input type="number" id="montoApuesta" min="1" placeholder="Ingrese el monto">
+      <div class="modal-buttons">
+        <button onclick="confirmarApuesta()">Confirmar</button>
+        <button class="btn-cancelar" onclick="cerrarModal()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalResultado" class="modal">
+    <div class="modal-content">
+      <h2 id="tituloResultado"></h2>
+      <p id="mensajeResultado"></p>
+      <button onclick="cerrarModalResultado()">Continuar</button>
+    </div>
+  </div>
+
+  <script src="js/ruleta.js"></script>
+</body>
+
+<footer><small>Desarrollo web y móvil</small></footer>
+</html>
